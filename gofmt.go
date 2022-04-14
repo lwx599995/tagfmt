@@ -66,8 +66,8 @@ func resetFlags() {
 }
 
 const (
-	tabWidth    = 8
-	printerMode = printer.UseSpaces | printer.TabIndent
+	tabWidth    = 4
+	printerMode = printer.UseSpaces
 )
 
 var (
@@ -80,7 +80,7 @@ var (
 var (
 	ErrUnclosedQuote   = errors.New("unclosed quote")
 	ErrUnclosedBracket = errors.New("unclosed bracket")
-	ErrInvalidTag      = errors.New("Invalid tag ")
+	ErrInvalidTag      = errors.New("invalid tag")
 )
 
 func NewAstError(fs *token.FileSet, n ast.Node, err error) error {
